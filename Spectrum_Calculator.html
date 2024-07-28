@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>
+      Spectrum Calculator
+    </title>
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Spectrum_Calculator.css">
+  </head> 
+  <body>
+    <div>
+      <div class="image-div">
+        <img class="teddy-image" src="teddy.jpg">
+      </div>
+    
+    <div class="calculator">
+      
+      <div class="output-div">
+        <p class="output"
+           onclick="calculation(value);
+           "></p>
+      </div>
+      <div class="button-container">
+      <div>
+        <button class="on-button operations" 
+                onclick="
+                onoffbutton();
+                result = ''
+                calculation(value);
+                " >
+          ON
+        </button>
+      </div>
+      <div>
+        <button class="delete-button operations"
+                onclick="
+                value = ''
+                result = result.toString().slice(0,-1);
+                calculation(value);
+                ">
+          DEL
+        </button>
+      </div>
+      <div>
+        <button class="operations"
+          onclick="
+          value = '%'
+          calculation(value);
+        ">
+          %
+        </button>
+      </div>
+      <div>
+        <button class="operations"
+          onclick="
+          value = '/'
+          calculation(value);
+        ">
+          /
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 1;
+          calculation(value);
+          ">
+          1
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 2
+          calculation(value);
+        ">
+          2
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 3
+          calculation(value);
+        ">
+          3
+        </button>
+      </div>
+      <div>
+        <button class="operations"
+          onclick="
+          value = '*'
+          calculation(value);
+        ">
+          *
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 4
+          calculation(value);
+        ">
+          4
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 5
+          calculation(value);
+        ">
+          5
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 6
+          calculation(value);
+        ">
+         6 
+        </button>
+      </div>
+      <div>  
+        <button class="operations"
+          onclick="
+          value = '-'
+          calculation(value);
+        ">
+          -
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 7
+          calculation(value);
+        ">
+          7
+        </button>
+      </div>
+      <div>
+        <button class="numbers"
+          onclick="
+          value = 8
+          calculation(value);
+        ">
+          8
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 9
+          calculation(value);
+        ">
+          9
+        </button>
+      </div>
+      <div>
+        <button class="operations"
+          onclick="
+          value = '+'
+          calculation(value);
+        ">
+          +
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = 0
+          calculation(value);
+        ">
+          0
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          value = '.'
+          calculation(value);
+        ">
+          .
+        </button>
+      </div>
+      <div>
+        <button class="numbers" 
+          onclick="
+          result = ''
+          calculation(value);
+          localStorage.setItem('result',result);
+        ">
+          Clear
+        </button>
+        </div>
+        <div>
+        <button class="equal-to operations" 
+          onclick="
+          try{
+            result = eval(result);
+          }
+          catch(err){
+            alert ('Invalid ');
+          }
+          calculation(value);
+          localStorage.setItem('result',result);
+        ">
+          =
+        </button>
+      </div>
+      </div>
+      <p class="wordings">
+        Let's Calculate !
+      </p>
+    </div>
+  </div>
+  </body>
+  <script src="Spectrum_Calculator.js">
+  </script>
+  </script>
+</html>
